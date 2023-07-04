@@ -2,6 +2,8 @@ import 'package:dynamic_color/dynamic_color.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:provider_practice_v2/counter_class.dart';
+import 'package:provider_practice_v2/providers/item_provider.dart';
+import 'package:provider_practice_v2/providers/product_provider.dart';
 import 'home.dart';
 
 void main() {
@@ -15,8 +17,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => Level1Class(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider<Level1Class>(
+          create: (_) => Level1Class(),
+        ),
+        ChangeNotifierProvider<ItemListProvider>(
+          create: (_) => ItemListProvider(),
+        ),
+        ChangeNotifierProvider<ProductProvider>(create: (_) => ProductProvider())
+      ],
       child: DynamicColorBuilder(
           builder: (ColorScheme? lightDynamic, ColorScheme? dark) {
         ColorScheme lightColorScheme;
@@ -39,5 +49,6 @@ class MyApp extends StatelessWidget {
         );
       }),
     );
+  
   }
 }
