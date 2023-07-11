@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'counter_class.dart';
+import '../../providers/counter_provider.dart';
 
 class Page2 extends StatelessWidget {
   const Page2({super.key});

@@ -1,7 +1,10 @@
+// ignore_for_file: prefer_final_fields
+
 import 'package:flutter/material.dart';
-import 'package:provider_practice_v2/product.dart';
+import 'package:provider_practice_v2/classes/product_class.dart';
 
 class ProductProvider extends ChangeNotifier {
+  // ignore: prefer_final_fields
   List<Product> _products = [
     Product(
         productname: "Samsung Galaxy S23 Ultra",

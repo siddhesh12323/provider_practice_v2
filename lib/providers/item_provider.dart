@@ -1,9 +1,10 @@
 import 'package:flutter/foundation.dart';
 
-import '../item_class.dart';
+import '../classes/item_class.dart';
 
 
 class ItemListProvider with ChangeNotifier {
+  // ignore: prefer_final_fields
   List<Item> _items = [
     Item('Item 1'),
     Item('Item 2'),

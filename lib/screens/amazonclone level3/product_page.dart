@@ -2,8 +2,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:provider_practice_v2/providers/product_provider.dart';
-import 'package:provider_practice_v2/screens/product_cart.dart';
-import 'package:provider_practice_v2/screens/product_favorite.dart';
+import 'package:provider_practice_v2/screens/amazonclone%20level3/product_cart.dart';
+import 'package:provider_practice_v2/screens/amazonclone%20level3/product_favorite.dart';
 
 int activeIndex = 0;
 

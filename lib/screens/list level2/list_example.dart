@@ -3,11 +3,13 @@ import 'package:provider/provider.dart';
 import 'package:provider_practice_v2/providers/item_provider.dart';
 
 class ListExamplePage1 extends StatelessWidget {
+  const ListExamplePage1({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Favorite Items'),
+        title: const Text('Favorite Items'),
       ),
       body: Consumer<ItemListProvider>(
         builder: (context, itemListProvider, _) {
@@ -32,7 +34,7 @@ class ListExamplePage1 extends StatelessWidget {
         },
       ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
         onPressed: () {
           Navigator.push(
             context,
@@ -49,7 +51,7 @@ class ListExamplePage2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Favorite Items'),
+        title: const Text('Favorite Items'),
       ),
       body: Consumer<ItemListProvider>(
         builder: (context, itemListProvider, _) {

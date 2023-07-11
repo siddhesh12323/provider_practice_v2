@@ -1,10 +1,10 @@
 import 'package:dynamic_color/dynamic_color.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:provider_practice_v2/counter_class.dart';
+import 'package:provider_practice_v2/providers/counter_provider.dart';
 import 'package:provider_practice_v2/providers/item_provider.dart';
 import 'package:provider_practice_v2/providers/product_provider.dart';
-import 'home.dart';
+import 'screens/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
       child: DynamicColorBuilder(
           builder: (ColorScheme? lightDynamic, ColorScheme? dark) {
         ColorScheme lightColorScheme;
+        // ignore: unused_local_variable
         ColorScheme darkColorScheme;
         if (lightDynamic != null && dark != null) {
           lightColorScheme = lightDynamic.harmonized()..copyWith();
